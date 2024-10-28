@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Projects - Osher Zafar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .zoom-container {
+            transform: scale(0.8); /* Scale to 80% */
+            transform-origin: top left; /* Set the origin for scaling */
+            width: 125%; /* Adjust width to compensate for scaling */
+            height: 125%; /* Adjust height to compensate for scaling */
+            position: relative; /* Positioning context */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Projects</h1>
+    <div class="projects-container">
+        <a href="https://github.com/osherz19991/final_app" target="_blank" class="project-link">
+            <div class="project-card">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Budget-image1.jpg') }}" alt="Budget Image 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Budget-image2.jpg') }}" alt="Budget Image 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Budget-image3.jpg') }}" alt="Budget Image 3">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Budget-image4.jpg') }}" alt="Budget Image 4">
+                    </div>
+                    <div class="project-title">Budget App</div>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/osherz19991/Game_Development_Final_Project" target="_blank" class="project-link">
+            <div class="project-card">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Game-image1.png') }}" alt="Game Image 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Game-image2.png') }}" alt="Game Image 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Game-image3.png') }}" alt="Game Image 3">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Game-image4.png') }}" alt="Game Image 4">
+                    </div>
+                    <div class="project-title">Game Development Project</div>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/osherz19991/overclocked" target="_blank" class="project-link">
+            <div class="project-card">
+                <div class="image-grid">
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Website-image1.jpg') }}" alt="Website Image 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Website-image2.jpg') }}" alt="Website Image 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="{{ url_for('static', filename='images/Website-image3.jpg') }}" alt="Website Image 3">
+                    </div>
+                    <div class="project-title">E-commerce Website</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <a href="{{ url_for('home') }}" class="back-link">Back to Home</a>
+    <script>
+        // Function to set the zoom level on load
+        function setZoom() {
+            document.body.style.transform = 'scale(0.8)';
+            document.body.style.transformOrigin = 'top left';
+            document.body.style.width = '125%'; // Adjust width
+            document.body.style.height = '125%'; // Adjust height
+        }
+        
+        // Call the function on window load
+        window.onload = setZoom;
+    </script>
+</body>
+</html>
